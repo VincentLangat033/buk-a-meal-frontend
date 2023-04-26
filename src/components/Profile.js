@@ -11,6 +11,7 @@ function Profile({ user, setUser }) {
     { method: "DELETE" }
     ).then((r) => {
       if (r.ok) {
+        // Change user state upon log out
         setUser(null);
         navigate("/");
       }else {
